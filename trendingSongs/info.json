@@ -1,0 +1,30 @@
+[
+    {
+        "id": 0,
+        "title": "All For You",
+        "description": "Anno Domini Beats",
+        "audio": "All For You - Anno Domini Beats.mp3",
+        "cover": "All For You - Anno Domini Beats.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Paradise",
+        "description": "Anno Domini Beats",
+        "audio": "Paradise - Anno Domini Beats.mp3",
+        "cover": "Paradise - Anno Domini Beats.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Wildfire",
+        "description": "Jessie Villa",
+        "audio": "Wildfire - Jessie Villa.mp3",
+        "cover": "Wildfire - Jessie Villa.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Willow Gozilla",
+        "description": "Zenith Bikini",
+        "audio": "Willow Gozilla (feat. Rusty James Miller) - Zenith Bikini.mp3",
+        "cover": "Willow Gozilla (feat. Rusty James Miller) - Zenith Bikini.jpg"
+    }
+]

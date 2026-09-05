@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 80">
+    <!-- Logo Icon -->
+    <circle cx="40" cy="40" r="32" fill="#1DB954" />
+
+    <!-- Music note -->
+    <path
+        d="M37 22v27.5 c0 5.8-4.5 9.5-10 9.5 c-5 0-9-2.7-9-7 s4-7 9-7 c2.2 0 4.2.5 6 1.5V27l22-5v22.5 c0 5.8-4.5 9.5-10 9.5 c-5 0-9-2.7-9-7 s4-7 9-7 c2.2 0 4.2.5 6 1.5V29l-14 3.2V22z"
+        fill="#121212" />
+
+    <!-- Brand Name -->
+    <text x="85" y="53" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700"
+        fill="#FFFFFF">
+        Tunexa
+    </text>
+</svg>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunexa - Music for Every Moment 🎧</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <img class="hamburger" src="assets/hamburger.svg" alt="">
+
+        <img class="logo" src="assets/logo.svg" alt="">
+
+        <div class="center">
+            <button class="navBtn homeBtn">
+                <img src="assets/home-icon.svg" alt="">
+                <span>Home</span>
+            </button>
+
+            <button class="navBtn aboutBtn">
+                <img src="assets/about.svg" alt="">
+                <span>About</span>
+            </button>
+
+            <button class="navBtn contactBtn">
+                <img src="assets/contact.svg" alt="">
+                <span>Contact Us</span>
+            </button>
+
+            <button class="navBtn login">Log In</button>
+        </div>
+
+        <div class="search">
+            <img src="assets/search.svg" alt="">
+            <input type="text" placeholder="What do you want to play?">
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <div class="left">
+            <div class="header">
+                <img src="assets/libraryIcon.svg" alt="">
+                <h3>Your Library</h3>
+            </div>
+
+            <ul class="songsList"></ul>
+
+            <button class="language">
+                <img src="assets/globe.svg" alt="">
+                <span>English</span>
+            </button>
+        </div>
+
+        <div class="right">
+            <div class="trending">
+                <h2>Trending Now!</h2>
+                <div class="trending-container"></div>
+            </div>
+
+            <div class="favSongs">
+                <h2>Your Music Collection!</h2>
+                <div class="favSongs-container"></div>
+            </div>
+
+            <div class="favArtists">
+                <h2>Artists on Repeat!</h2>
+                <div class="favArtists-container"></div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div id="aboutSection">
+                <h4>About Tunexa</h4>
+                <p>
+                    Tunexa is a frontend project built using HTML, CSS and JavaScript.
+                    This project was created to practice and improve my frontend web
+                    development skills while building a music streaming interface.
+                </p>
+            </div>
+
+            <div id="contactSection">
+                <h4>Contact Me</h4>
+                <p>Email: anantasangwan@gmail.com</p>
+                <p>
+                    LinkedIn:
+                    <a href="https://www.linkedin.com/in/anantasangwan/" target="_blank">
+                        LinkedIn Profile
+                    </a>
+                </p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="copyright" style="align-self: flex-end;">
+                <p style="color: #969595; font-weight: 550;">&copy; 2026 Ananta Sangwan</p>
+                <p style="color: #969595; font-weight: 520;">• Built with HTML, CSS & JavaScript</p>
+            </div>
+
+            <!-- FIX = inside right - may not be visible when user views library in phone -->
+            <div class="playbar">
+                <div>
+                    <button class="previous" style="background-color: rgba(0, 0, 0, 0); border: none;">
+                        <img src="assets/previous.svg" alt="">
+                    </button>
+
+                    <button class="paused" style="background-color: rgba(0, 0, 0, 0); border: none; outline: none;">
+                        <img src="assets/paused.svg" alt="">
+                    </button>
+
+                    <button class="next" style="background-color: rgba(0, 0, 0, 0); border: none;">
+                        <img src="assets/next.svg" alt="">
+                    </button>
+
+                </div>
+
+                <div class="songInfo">
+                    <div class="currSong"></div>
+                    <div>
+                        <span class="currTime"></span>
+                        <input type="range" name="seekBar" id="seekBar" value="0" min="0">
+                        <span class="totalDuration"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<svg width="35" height="35" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black circle -->
+  <circle cx="12.5" cy="12.5" r="12.5" fill="black"/>
+
+  <!-- White pause symbol -->
+  <rect x="8.5" y="7.5" width="3" height="10" rx="1.2" fill="white"/>
+  <rect x="13.5" y="7.5" width="3" height="10" rx="1.2" fill="white"/>
+</svg>
