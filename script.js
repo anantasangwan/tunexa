@@ -495,6 +495,11 @@ audio.addEventListener("ended", () => {
 // ---------- display/hide left SideBar on hamburger's click ------------
 hamburger.addEventListener("click", () => {
     left.classList.toggle("show");
+
+    if (left.classList.contains("show"))
+        hamburger.src = "assets/close.svg";
+    else
+        hamburger.src = "assets/hamburger.svg"
 });
 
 // ------ listen to about Btn clicks ------

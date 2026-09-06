@@ -33,11 +33,12 @@ nav {
     display: none;
     height: 25px;
     width: 25px;
+    transition: all 200ms cubic-bezier(.3, 0, 0, 1);
     cursor: pointer;
 }
 
 .logo {
-    height: 37px;
+    width: 105px;
 }
 
 .center {
@@ -83,7 +84,6 @@ nav {
 
 .login:hover {
     background-color: #e6e3e3;
-    font-size: 14px;
 }
 
 .search {
@@ -362,6 +362,7 @@ nav {
     border-radius: 7px;
     box-shadow: 8px 0 30px rgba(0, 0, 0, 0.7);
     border: 1px solid #2f2f2f;
+    flex-shrink: 0;
     position: sticky;
     bottom: 0px;
 
@@ -497,8 +498,8 @@ nav {
     .trending-card button img,
     .favSongs-card button img,
     .favArtists-card button img {
-        height: 32px;
-        width: 32px;
+        height: 35px;
+        width: 35px;
     }
 
     .playbar {
@@ -565,8 +566,8 @@ nav {
     }
 
     .songsList li img {
-        height: 24px;
-        width: 24px;
+        height: 27px;
+        width: 27px;
     }
 
     .language {
@@ -601,15 +602,15 @@ nav {
     .trending-card button,
     .favSongs-card button,
     .favArtists-card button {
-        top: 120px;
+        top: 116px;
         right: 16px;
     }
 
     .trending-card button img,
     .favSongs-card button img,
     .favArtists-card button img {
-        height: 24px;
-        width: 24px;
+        height: 29px;
+        width: 29px;
     }
 
     .trending-card h4,
@@ -659,7 +660,7 @@ nav {
 
     .left {
         position: fixed;
-        width: 45%;
+        width: 50%;
         height: calc(100vh - 100px);
         transform: translateX(-150%);
         z-index: 4 !important;
@@ -742,7 +743,7 @@ nav {
     }
 }
 
-/* ------- overall responsiveness for mobile screens */
+/* ------- overall responsiveness for mobile screens ---- */
 @media screen and (max-width: 620px) {
     body {
         padding: 5px;
@@ -756,6 +757,7 @@ nav {
 
     .center {
         gap: 9px;
+        margin-right: 0;
     }
 
     .navBtn {
@@ -763,8 +765,8 @@ nav {
     }
 
     .hamburger {
-        height: 21px;
-        width: 21px;
+        height: 23px;
+        width: 23px;
     }
 
     .homeBtn,
@@ -776,19 +778,21 @@ nav {
     .login {
         font-size: 13px;
         padding: 5px 10px;
+        border-radius: 12px;
     }
 
     .search {
         display: none;
+        margin-left: 0;
     }
 
     .main-container {
-        height: calc(100vh - 66px);
+        height: calc(100dvh - 70px);
     }
 
     .left {
-        height: calc(100vh - 66px);
-        width: 65%;
+        height: calc(100dvh - 70px);
+        width: 75%;
     }
 
     .header {
@@ -810,8 +814,8 @@ nav {
     }
 
     .songsList li img {
-        height: 21px;
-        width: 21px;
+        height: 25px;
+        width: 25px;
     }
 
     .language {
@@ -862,15 +866,15 @@ nav {
     .trending-card button,
     .favSongs-card button,
     .favArtists-card button {
-        top: 94px;
+        top: 88px;
         right: 14px;
     }
 
     .trending-card button img,
     .favSongs-card button img,
     .favArtists-card button img {
-        height: 19px;
-        width: 19px;
+        height: 27px;
+        width: 27px;
     }
 
     .trending-card h4,
@@ -912,8 +916,8 @@ nav {
     }
 
     .playbar button img {
-        height: 27px;
-        width: 27px;
+        height: 29px;
+        width: 29px;
     }
 
     .currSong p:first-child {
@@ -928,11 +932,11 @@ nav {
 
 @media screen and (max-width: 500px) {
     nav {
-        padding: 0px 4px;
+        padding: 5px 4px;
     }
 
     .logo {
-        height: 31px;
+        width: 90px;
     }
 
     .center {
@@ -954,15 +958,11 @@ nav {
 
     .login {
         padding: 5px 8px;
-    }
-
-    .main-container {
-        height: calc(100vh - 56px);
+        border-radius: 10px;
     }
 
     .left {
-        height: calc(100vh - 56px);
-        width: 75%;
+        width: 80%;
     }
 
     .trending h2,
@@ -973,15 +973,15 @@ nav {
     }
 
     .playbar button img {
-        height: 24px;
-        width: 24px;
+        height: 27px;
+        width: 27px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .hamburger {
-        height: 19px;
-        width: 19px;
+        height: 21px;
+        width: 21px;
     }
 
     .center {
@@ -997,20 +997,50 @@ nav {
 
     .login {
         font-size: 11px;
-        padding: 4px 7px;
-    }
-
-    .main-container {
-        height: calc(100vh - 50px);
+        padding: 4px 6px;
+        border-radius: 8px;
     }
 
     .left {
-        height: calc(100vh - 50px);
-        width: 80%;
+        width: 85%;
     }
 }
 
 @media screen and (max-width: 360px) {
+    nav {
+        padding: 5px 2px;
+        gap: 6px;
+    }
+
+    .homeBtn span,
+    .contactBtn span,
+    .aboutBtn span {
+        font-size: 10px;
+    }
+
+    .center {
+        gap: 6px;
+    }
+
+    .homeBtn img,
+    .contactBtn img,
+    .aboutBtn img {
+        height: 21px;
+        width: 21px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .logo {
+        width: 85px;
+    }
+
+    .homeBtn img,
+    .contactBtn img,
+    .aboutBtn img {
+        height: 23px;
+        width: 23px;
+    }
 
     .homeBtn span,
     .contactBtn span,
@@ -1020,20 +1050,5 @@ nav {
 
     .center {
         gap: 7px;
-    }
-
-    .homeBtn img,
-    .contactBtn img,
-    .aboutBtn img {
-        height: 21px;
-        width: 21px;
-    }
-
-    .main-container {
-        height: calc(100vh - 48px);
-    }
-
-    .left {
-        height: calc(100vh - 48px);
     }
 }
