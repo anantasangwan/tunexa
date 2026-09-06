@@ -10,6 +10,11 @@
 body {
     background-color: black;
     padding: 10px;
+    /* --- dynamic viewport height --- */
+    height: 100dvh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 button {
@@ -18,14 +23,17 @@ button {
 
 /* ---------- NavBar Styles ---------- */
 nav {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+    /* --- Prevents navbar from shrinking --- */
+    flex-shrink: 0;
+
     width: 95%;
     margin: 5px auto 12px auto;
     padding: 7px 25px;
     background-color: black;
     border-radius: 7px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .hamburger {
@@ -113,12 +121,18 @@ nav {
 
 /* -------------------- Main -------------------- */
 .main-container {
+    /* --- Makes main container take the remaining space --- */
+    flex: 1;
+
+    /* -- Allows main container to shrink and let its children scroll -- */
+    min-height: 0;
+    /* -- no specific height - flexbox determines it -- */
+    height: auto;
+
     display: flex;
     gap: 10px;
     position: relative;
     margin: 9px 4px;
-
-    height: calc(100vh - 100px);
     overflow: hidden;
 }
 
@@ -127,9 +141,9 @@ nav {
 .left {
     background-color: #121212;
     border-radius: 7px;
-    width: 25%;
     padding: 12px;
 
+    width: 25%;
     height: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -155,7 +169,7 @@ nav {
 
 .songsList {
     list-style: none;
-    height: 75%;
+    height: 70%;
     overflow-y: scroll;
     scrollbar-width: none;
 }
@@ -204,13 +218,14 @@ nav {
 .right {
     background-color: #121212;
     border-radius: 7px;
-    width: 75%;
     padding: 24px 32px 0px 32px;
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
 
+    width: 75%;
+    min-height: 0;
     height: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -362,6 +377,7 @@ nav {
     border-radius: 7px;
     box-shadow: 8px 0 30px rgba(0, 0, 0, 0.7);
     border: 1px solid #2f2f2f;
+
     flex-shrink: 0;
     position: sticky;
     bottom: 0px;
@@ -418,9 +434,6 @@ nav {
 
 /* ========= responsive media queries ======== */
 @media screen and (max-width: 1200px) {
-    .songsList {
-        height: 70%;
-    }
 
     .trending h2,
     .favSongs h2,
@@ -659,9 +672,8 @@ nav {
     }
 
     .left {
-        position: fixed;
+        position: absolute;
         width: 50%;
-        height: calc(100vh - 100px);
         transform: translateX(-150%);
         z-index: 4 !important;
     }
@@ -677,9 +689,6 @@ nav {
         width: 100%;
     }
 
-    .songsList {
-        height: 80%;
-    }
 }
 
 @media screen and (max-width: 900px) {
@@ -786,12 +795,7 @@ nav {
         margin-left: 0;
     }
 
-    .main-container {
-        height: calc(100dvh - 70px);
-    }
-
     .left {
-        height: calc(100dvh - 70px);
         width: 75%;
     }
 
